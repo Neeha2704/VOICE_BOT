@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neeha Madhuri — AI Voice Interview Bot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="tag">AI Interview Bot · Stage 1 · 100x</div>
+    <h1>Hi, I'm <span>Neeha Madhuri</span></h1>
+    <p class="subtitle">Ask me anything — tap the orb and speak</p>
+  </div>
+
+  <!-- AVATAR -->
+  <div class="avatar-wrap">
+    <img src="images/avatar.svg" alt="Neeha Madhuri" class="avatar-img" id="avatarImg"/>
+  </div>
+
+  <!-- ORB / MIC BUTTON -->
+  <div class="orb-wrap">
+    <div class="orb-ring"></div>
+    <div class="orb" id="orb" onclick="toggleListen()">
+      <img src="images/mic-icon.svg" alt="Mic" class="orb-icon-img" id="orbIcon"/>
+    </div>
+  </div>
+
+  <!-- STATUS LABEL -->
+  <div class="status" id="status">tap to speak</div>
+
+  <!-- ERROR BOX -->
+  <div class="error-box" id="errorBox"></div>
+
+  <!-- CHAT AREA -->
+  <div class="chat-area" id="chatArea"></div>
+
+  <!-- HINT QUESTION CHIPS -->
+  <div class="hints">
+    <div class="hints-title">Try asking</div>
+    <div class="hint-chips">
+      <button class="chip" onclick="askChip('Tell me about your life story')">Life story</button>
+      <button class="chip" onclick="askChip('What is your number one superpower?')">Superpower</button>
+      <button class="chip" onclick="askChip('What are your top 3 areas to grow in?')">Growth areas</button>
+      <button class="chip" onclick="askChip('What misconception do people have about you?')">Misconceptions</button>
+      <button class="chip" onclick="askChip('How do you push your limits?')">Pushing limits</button>
+    </div>
+  </div>
+
+  <footer>Powered by Groq (LLaMA 3) · Browser Speech API · Built for 100x Stage 1</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
